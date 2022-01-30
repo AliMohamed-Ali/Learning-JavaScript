@@ -10,7 +10,7 @@ hold - The turn total is added to the player's score and it becomes the opponent
 
  */
 
-var score , roundScore,activePlayer,gamePlaying;
+var score , roundScore,activePlayer,gamePlaying,prevScore;
 init();
 
 //onclic of the roledice 
@@ -28,6 +28,8 @@ document.querySelector('.btn--roll').addEventListener('click',()=>{
         //add score 
         roundScore += dice;
         document.querySelector('#current--'+activePlayer).textContent = roundScore;
+        prevScore = dice
+        console.log(prevScore)
 
 
     }else{
@@ -94,3 +96,13 @@ function init(){
 }
 
 document.querySelector('.btn--new').addEventListener('click',init);
+
+
+/*
+your 3 challanges
+change the game to follow these rules:
+1-a player looses his entire score when he rolls two 6 in arow .after that
+it's the next player's turn .(hint:always save the previous dice roll in separate varible)
+2-add an input field to the html.where the players can set the winner score
+-add another dice to the game ,the player losses his current score when one of the is 1
+*/

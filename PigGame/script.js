@@ -44,7 +44,7 @@ document.querySelector('.btn--hold').addEventListener('click',function(){
     //update ui
     document.querySelector('#score--'+activePlayer).textContent = score[activePlayer];
     //check if a player won
-    if(score[activePlayer]>= 10){
+    if(score[activePlayer]>= 100){
         document.querySelector('.player--'+activePlayer).classList.add('player--winner')
         document.querySelector('.player--'+activePlayer).classList.remove('active')
         document.getElementById('name--'+activePlayer).textContent = 'Winner!'
